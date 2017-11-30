@@ -1,0 +1,29 @@
+.background{
+    -fx-background-image: url("/image/dark.png");
+}
+.button {
+    -fx-background-color: #000000;
+    -fx-border-color: #4CAF50;
+    -fx-border-radius: 5px;
+    -fx-text-fill: #16ee07;
+}
+
+.button:hover {
+    -fx-background-color: #3e8e41;
+    -fx-background-radius: 5px;
+}
+.radio-button{
+    -fx-text-fill: #16ee07;
+}
+.label {
+    -fx-text-fill: #16ee07;
+    -fx-font-size: 18;
+}
+
+.list-view{
+    -fx-text-fill: #16ee07;
+    -fx-opacity: 0.2;
+}
+.list-view:hover{
+    -fx-background-color: #3e8e41;
+}
