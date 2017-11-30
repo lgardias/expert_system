@@ -22,7 +22,7 @@
 
 .list-view{
     -fx-text-fill: #16ee07;
-    -fx-opacity: 0.2;
+    -fx-opacity: 0.5;
 }
 .list-view:hover{
     -fx-background-color: #3e8e41;

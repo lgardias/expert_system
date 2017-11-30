@@ -1,5 +1,6 @@
 package com.lgardias;
 
+import com.lgardias.system.ExpertSystem;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -7,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
+    public final static ExpertSystem expertSystem = new ExpertSystem();
     public static void main(String[] args) {
         launch(args);
     }
