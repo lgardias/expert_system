@@ -1,0 +1,30 @@
+.vbox {
+
+    -fx-border-radius: 5px;
+    -fx-border-color: #16ee07;
+    -fx-opacity: 0.7;
+
+}
+.borderpane{
+    -fx-background-image: url("/image/dark.png");
+}
+.button {
+    -fx-background-color: #000000;
+    -fx-border-color: #4CAF50;
+    -fx-border-radius: 5px;
+    -fx-text-fill: #16ee07;
+}
+
+.button:hover {
+    -fx-background-color: #3e8e41;
+    -fx-background-radius: 5px;
+}
+
+.label {
+    -fx-text-fill: #16ee07;
+    -fx-font-size: 18;
+}
+
+.label-first {
+    -fx-font-size: 20;
+}

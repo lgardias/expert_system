@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane stylesheets="/css/start.css" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="400.0"
+            prefWidth="600.0" styleClass="borderpane"  xmlns="http://javafx.com/javafx/9"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lgardias.controller.StartPaneController">
+    <center>
+        <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="308.0" prefWidth="379.0"
+              spacing="10.0" styleClass="vbox"  BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets/>
+            </BorderPane.margin>
+            <children>
+                <Label contentDisplay="CENTER" styleClass="label-first" text="Wybierz swój komputer"/>
+                <Label text="Witaj w programie" textFill="#16ee07"/>
+                <Label text="który dopasuję idealny" textFill="#16ee07"/>
+                <Label text="dla CIEBIE komputer." textFill="#16ee07"/>
+                <Label/>
+                <Label text="Aby zacząć kliknij"/>
+                <Button fx:id="startButton" id="start-button" mnemonicParsing="false"
+                        text="START">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Button>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>
