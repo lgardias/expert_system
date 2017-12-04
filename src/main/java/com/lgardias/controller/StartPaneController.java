@@ -1,5 +1,6 @@
 package com.lgardias.controller;
 
+import com.lgardias.rule.Rule;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;

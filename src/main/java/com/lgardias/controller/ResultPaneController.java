@@ -31,5 +31,6 @@ public class ResultPaneController implements Initializable {
 
     private void configureButton() {
         exitButton.setOnAction(event -> System.exit(0));
+
     }
 }

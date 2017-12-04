@@ -9,4 +9,8 @@ public class Rule {
     public Rule(Function function){
         this.function = function;
     }
+
+    public boolean valid(){
+        return (Boolean)function.apply(null);
+    }
 }

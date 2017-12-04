@@ -63,6 +63,62 @@ public class KnowledgeBase {
         else POWER_OFF = false;
     }
 
+    public boolean isRUN() {
+        return RUN;
+    }
+
+    public boolean isNOT_RUN() {
+        return NOT_RUN;
+    }
+
+    public boolean isRUN_RESTART() {
+        return RUN_RESTART;
+    }
+
+    public boolean isSOUNDS() {
+        return SOUNDS;
+    }
+
+    public boolean isHDD_SSD() {
+        return HDD_SSD;
+    }
+
+    public boolean isRESTART() {
+        return RESTART;
+    }
+
+    public boolean isBLUESRCREEN() {
+        return BLUESRCREEN;
+    }
+
+    public boolean isSLOW_MOTION() {
+        return SLOW_MOTION;
+    }
+
+    public boolean isLOUD() {
+        return LOUD;
+    }
+
+    public boolean isHEAT() {
+        return HEAT;
+    }
+
+    public boolean isMONITOR() {
+        return MONITOR;
+    }
+
+    public boolean isARTIFACT() {
+        return ARTIFACT;
+    }
+
+    public boolean isMONIOR_OFF() {
+        return MONIOR_OFF;
+    }
+
+    public boolean isPOWER_OFF() {
+        return POWER_OFF;
+    }
+
     @Override
     public String toString() {
         return "KnowledgeBase{" +
