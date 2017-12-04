@@ -1,31 +1,21 @@
 package com.lgardias.system;
 
-import com.lgardias.assertion.Assertion;
-
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 public class ExpertSystem {
-    private List<Assertion> listOfAssertions;
+    private Set<String> setOfAssertions;
 
     public ExpertSystem() {
-        listOfAssertions = new ArrayList<Assertion>();
+        setOfAssertions = new HashSet<>();
     }
 
-    public void addAssertion(Assertion assertion) {
-        listOfAssertions.add(assertion);
+    public void addAssertion(String assertion) {
+        setOfAssertions.add(assertion);
     }
 
-    public List<Assertion> getListOfAssertions() {
-        return listOfAssertions;
-    }
-
-    public List<String> getListOfAssertionsAsListOfString() {
-        List<String> list = new ArrayList<>();
-        listOfAssertions.stream().forEach(assertion -> {
-            list.add("Krok "+ assertion.getStepNumber() +" : "+ assertion.getAssertion());
-
-        });
-        return list;
+    public void showAssertion() {
+//        System.out.println(setOfAssertions.size());
+        setOfAssertions.stream().forEach(System.out::println);
     }
 }

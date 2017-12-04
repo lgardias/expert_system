@@ -19,10 +19,10 @@
                 <Insets/>
             </BorderPane.margin>
             <children>
-                <Label contentDisplay="CENTER" styleClass="label-first" text="Wybierz swój komputer"/>
+                <Label contentDisplay="CENTER" styleClass="label-first" text="Zdiagnozuj swój komputer"/>
                 <Label text="Witaj w programie" textFill="#16ee07"/>
-                <Label text="który dopasuję idealny" textFill="#16ee07"/>
-                <Label text="dla CIEBIE komputer." textFill="#16ee07"/>
+                <Label text="który rozpoznaje popsute" textFill="#16ee07"/>
+                <Label text="podzespoły TWOJEGO komputera." textFill="#16ee07"/>
                 <Label/>
                 <Label text="Aby zacząć kliknij"/>
                 <Button fx:id="startButton" id="start-button" mnemonicParsing="false"
