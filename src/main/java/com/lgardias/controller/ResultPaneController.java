@@ -1,5 +1,6 @@
 package com.lgardias.controller;
 
+import com.lgardias.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -20,6 +21,12 @@ public class ResultPaneController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
         configureButton();
+        configureTextArea();
+    }
+
+    private void configureTextArea() {
+        Main.expertSystem.createKnowledgeBase();
+        resultTextArea.setText(Main.expertSystem.getKnowledgeBase().toString());
     }
 
     private void configureButton() {
