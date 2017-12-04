@@ -10,12 +10,11 @@ import javafx.scene.control.ToggleGroup;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Question1PaneController implements Initializable {
+public class Question4PaneController implements Initializable {
 
     private final ToggleGroup cashGroup = new ToggleGroup();
 
     private ViewChanger viewChanger = new ViewChanger();
-
 
     @FXML
     private RadioButton chooseRadioButton1;
@@ -23,6 +22,8 @@ public class Question1PaneController implements Initializable {
     @FXML
     private RadioButton chooseRadioButton2;
 
+    @FXML
+    private RadioButton chooseRadioButton3;
 
     @FXML
     private Button backButton;
@@ -41,13 +42,10 @@ public class Question1PaneController implements Initializable {
     private void configureNextButton() {
         nextButton.setOnAction(event -> {
             if (chooseRadioButton1.isSelected()) {
-                Main.expertSystem.addAssertion("RUN");
-            }
-            if (chooseRadioButton2.isSelected()) {
-                Main.expertSystem.addAssertion("NOT_RUN");
+                Main.expertSystem.addAssertion("HDD/SSD");
             }
 
-            viewChanger.changeView(nextButton, 2);
+            viewChanger.changeView(nextButton, 5);
 
         });
     }
@@ -57,10 +55,13 @@ public class Question1PaneController implements Initializable {
         chooseRadioButton1.setSelected(true);
 
         chooseRadioButton2.setToggleGroup(cashGroup);
+
+        chooseRadioButton3.setToggleGroup(cashGroup);
     }
 
 
     private void configureBackButton() {
-        backButton.setOnAction(event -> viewChanger.changeView(nextButton, 0));
+        backButton.setOnAction(event -> viewChanger.changeView(nextButton, 3));
+
     }
 }

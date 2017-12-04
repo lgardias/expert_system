@@ -19,6 +19,7 @@ public class Question2PaneController implements Initializable {
 
     private final ToggleGroup cashGroup = new ToggleGroup();
 
+    private ViewChanger viewChanger = new ViewChanger();
 
     @FXML
     private RadioButton chooseRadioButton1;
@@ -49,7 +50,7 @@ public class Question2PaneController implements Initializable {
                 Main.expertSystem.addAssertion("RUN_RESTART");
             }
 
-            Main.expertSystem.showAssertion();
+            viewChanger.changeView(nextButton, 3);
 
         });
     }
@@ -65,20 +66,6 @@ public class Question2PaneController implements Initializable {
 
 
     private void configureBackButton() {
-        backButton.setOnAction(event -> {
-            Stage stage;
-            Parent root;
-
-            stage = (Stage) backButton.getScene().getWindow();
-            try {
-                root = FXMLLoader.load(getClass().getResource("/view/Question1Pane.fxml"));
-                Scene scene = new Scene(root);
-                stage.setScene(scene);
-                stage.show();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-        });
+        backButton.setOnAction(event -> viewChanger.changeView(nextButton, 1));
     }
 }

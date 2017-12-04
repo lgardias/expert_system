@@ -21,6 +21,9 @@ public class ViewChanger {
                 case 0:
                     root = FXMLLoader.load(getClass().getResource("/view/StartPane.fxml"));
                     break;
+                case 8:
+                    root = FXMLLoader.load(getClass().getResource("/view/ResultPane.fxml"));
+                    break;
                 default:
                     root = FXMLLoader.load(getClass().getResource("/view/Question"+numberOFPanel+"Pane.fxml"));
             }

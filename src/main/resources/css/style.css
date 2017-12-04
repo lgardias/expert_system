@@ -19,3 +19,10 @@
     -fx-text-fill: #16ee07;
     -fx-font-size: 18;
 }
+.check-box{
+    -fx-text-fill: #16ee07;
+}
+.text-area{
+    -fx-opacity: 0.6;
+    -fx-text-fill: #16ee07;
+}

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+            prefWidth="600.0" styleClass="background" stylesheets="/css/style.css" xmlns="http://javafx.com/javafx/9"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lgardias.controller.Question6PaneController">
+    <children>
+        <BorderPane layoutX="-3.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0"
+                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <center>
+                <VBox alignment="CENTER" prefHeight="400.0" prefWidth="599.0" spacing="10.0"
+                      BorderPane.alignment="CENTER">
+                    <BorderPane.margin>
+                        <Insets left="20.0" right="20.0"/>
+                    </BorderPane.margin>
+                    <children>
+                        <Label text="Czy występują problemy">
+                            <font>
+                                <Font size="22.0"/>
+                            </font>
+                        </Label>
+                        <Label text="z wyświetlanym obrazem ?">
+                            <font>
+                                <Font size="22.0"/>
+                            </font>
+                        </Label>
+                        <VBox alignment="CENTER_LEFT" prefHeight="192.0" prefWidth="177.0" spacing="20.0">
+                            <children>
+                                <CheckBox styleClass="check-box" fx:id="chooseCheckBox1" mnemonicParsing="false"
+                                          text="NIE">
+                                    <VBox.margin>
+                                        <Insets/>
+                                    </VBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="chooseCheckBox2" mnemonicParsing="false"
+                                          text="TAK, obraz się nie wyświetla">
+                                    <VBox.margin>
+                                        <Insets/>
+                                    </VBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="chooseCheckBox3" mnemonicParsing="false"
+                                          text="TAK, na ekranie pojawiają się artefakty">
+                                    <VBox.margin>
+                                        <Insets/>
+                                    </VBox.margin>
+                                </CheckBox>
+                                <CheckBox fx:id="chooseCheckBox4" mnemonicParsing="false"
+                                          text="TAK, ekran po czasie znika">
+                                    <VBox.margin>
+                                        <Insets/>
+                                    </VBox.margin>
+                                </CheckBox>
+                            </children>
+                            <VBox.margin>
+                                <Insets left="180.0" right="90.0"/>
+                            </VBox.margin>
+                            <opaqueInsets>
+                                <Insets/>
+                            </opaqueInsets>
+                        </VBox>
+                        <HBox alignment="CENTER" prefHeight="52.0" prefWidth="360.0" spacing="40.0">
+                            <children>
+                                <Button fx:id="backButton" mnemonicParsing="false" text="Wstecz"/>
+                                <Button fx:id="nextButton" mnemonicParsing="false" text="Dalej"/>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>
