@@ -14,6 +14,7 @@ import java.util.ResourceBundle;
 
 public class StartPaneController implements Initializable {
 
+    private ViewChanger viewChanger = new ViewChanger();
     @FXML
     private Button startButton;
 
@@ -23,20 +24,7 @@ public class StartPaneController implements Initializable {
     }
 
     private void cofigureButton() {
-        startButton.setOnAction(event -> {
-            Stage stage;
-            Parent root;
+        startButton.setOnAction(event -> viewChanger.changeView(startButton, 1));
 
-            stage = (Stage) startButton.getScene().getWindow();
-            try {
-                root = FXMLLoader.load(getClass().getResource("/view/CashPane.fxml"));
-                Scene scene = new Scene(root);
-                stage.setScene(scene);
-                stage.show();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-        });
     }
 }
