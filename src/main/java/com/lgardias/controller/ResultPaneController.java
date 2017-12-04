@@ -26,7 +26,7 @@ public class ResultPaneController implements Initializable {
 
     private void configureTextArea() {
         Main.expertSystem.createKnowledgeBase();
-        resultTextArea.setText(Main.expertSystem.getKnowledgeBase().toString());
+        resultTextArea.setText(Main.expertSystem.validateRules());
     }
 
     private void configureButton() {

@@ -39,34 +39,86 @@ public class ExpertSystem {
     }
 
     private void createProcessorRules() {
+        processorRules = new ArrayList<>();
 
+        Rule r1 = new Rule((t) -> {
+            if (knowledgeBase.isHEAT() && knowledgeBase.isBLUESRCREEN() && knowledgeBase.isRESTART()) {
+                return true;
+            } else return false;
+        });
+        Rule r2 = new Rule((t) -> {
+            if (knowledgeBase.isHEAT() && knowledgeBase.isRESTART() && knowledgeBase.isLOUD()) {
+                return true;
+            } else return false;
+        });
+        Rule r3 = new Rule((t) -> {
+            if (knowledgeBase.isHEAT() && knowledgeBase.isBLUESRCREEN() && knowledgeBase.isLOUD()) {
+                return true;
+            } else return false;
+        });
+        Rule r4 = new Rule((t) -> {
+            if (knowledgeBase.isBLUESRCREEN() && knowledgeBase.isRESTART() && knowledgeBase.isLOUD()) {
+                return true;
+            } else return false;
+        });
+
+        processorRules.add(r1);
+        processorRules.add(r2);
+        processorRules.add(r3);
+        processorRules.add(r4);
     }
 
     private void createHeatRules() {
+        heatRules = new ArrayList<>();
 
+        Rule r1 = new Rule((t) -> {
+            if (knowledgeBase.isHEAT() && knowledgeBase.isLOUD()) {
+                return true;
+            } else return false;
+        });
+        Rule r2 = new Rule((t) -> {
+            if (knowledgeBase.isHEAT() && knowledgeBase.isRESTART()) {
+                return true;
+            } else return false;
+        });
+        Rule r3 = new Rule((t) -> {
+            if (knowledgeBase.isLOUD() && knowledgeBase.isRESTART()) {
+                return true;
+            } else return false;
+        });
+        Rule r4 = new Rule((t) -> {
+            if (knowledgeBase.isHEAT() && knowledgeBase.isRESTART() && knowledgeBase.isLOUD()) {
+                return true;
+            } else return false;
+        });
+
+        heatRules.add(r1);
+        heatRules.add(r2);
+        heatRules.add(r3);
+        heatRules.add(r4);
     }
 
     private void createMemoryeRules() {
         memoryeRules = new ArrayList<>();
-        Rule r1 = new Rule((t) ->{
-            if(knowledgeBase.isBLUESRCREEN() && knowledgeBase.isRESTART() && knowledgeBase.isRUN_RESTART()){
+        Rule r1 = new Rule((t) -> {
+            if (knowledgeBase.isBLUESRCREEN() && knowledgeBase.isRESTART() && knowledgeBase.isRUN_RESTART()) {
                 return true;
-            }else return false;
+            } else return false;
         });
-        Rule r2 = new Rule((t) ->{
-            if(knowledgeBase.isBLUESRCREEN() && knowledgeBase.isRESTART()){
+        Rule r2 = new Rule((t) -> {
+            if (knowledgeBase.isBLUESRCREEN() && knowledgeBase.isRESTART()) {
                 return true;
-            }else return false;
+            } else return false;
         });
-        Rule r3 = new Rule((t) ->{
-            if(knowledgeBase.isBLUESRCREEN() && knowledgeBase.isRUN_RESTART()){
+        Rule r3 = new Rule((t) -> {
+            if (knowledgeBase.isBLUESRCREEN() && knowledgeBase.isRUN_RESTART()) {
                 return true;
-            }else return false;
+            } else return false;
         });
-        Rule r4 = new Rule((t) ->{
-            if(knowledgeBase.isRESTART() && knowledgeBase.isRUN_RESTART()){
+        Rule r4 = new Rule((t) -> {
+            if (knowledgeBase.isRESTART() && knowledgeBase.isRUN_RESTART()) {
                 return true;
-            }else return false;
+            } else return false;
         });
 
         memoryeRules.add(r1);
@@ -76,21 +128,106 @@ public class ExpertSystem {
     }
 
     private void createGraficsRules() {
+        graficsRules = new ArrayList<>();
+        Rule r1 = new Rule((t) -> {
+            if (knowledgeBase.isRUN() && knowledgeBase.isARTIFACT() && knowledgeBase.isSOUNDS()) {
+                return true;
+            } else return false;
+        });
+        Rule r2 = new Rule((t) -> {
+            if (knowledgeBase.isRUN() && knowledgeBase.isARTIFACT() && knowledgeBase.isRESTART()) {
+                return true;
+            } else return false;
+        });
+        Rule r3 = new Rule((t) -> {
+            if (knowledgeBase.isRUN() && knowledgeBase.isARTIFACT() && knowledgeBase.isBLUESRCREEN()) {
+                return true;
+            } else return false;
+        });
+        Rule r4 = new Rule((t) -> {
+            if (knowledgeBase.isRUN() && knowledgeBase.isARTIFACT() && knowledgeBase.isSLOW_MOTION()) {
+                return true;
+            } else return false;
+        });
+        Rule r5 = new Rule((t) -> {
+            if (knowledgeBase.isRUN() && knowledgeBase.isARTIFACT() && knowledgeBase.isMONIOR_OFF()) {
+                return true;
+            } else return false;
+        });
+        Rule r6 = new Rule((t) -> {
+            if (knowledgeBase.isRUN() && knowledgeBase.isRESTART() && knowledgeBase.isSOUNDS()) {
+                return true;
+            } else return false;
+        });
+        Rule r7 = new Rule((t) -> {
+            if (knowledgeBase.isRUN() && knowledgeBase.isRESTART() && knowledgeBase.isBLUESRCREEN()) {
+                return true;
+            } else return false;
+        });
+        Rule r8 = new Rule((t) -> {
+            if (knowledgeBase.isRUN() && knowledgeBase.isRESTART() && knowledgeBase.isSLOW_MOTION()) {
+                return true;
+            } else return false;
+        });
+        Rule r9 = new Rule((t) -> {
+            if (knowledgeBase.isRUN() && knowledgeBase.isRESTART() && knowledgeBase.isMONIOR_OFF()) {
+                return true;
+            } else return false;
+        });
+        Rule r10 = new Rule((t) -> {
+            if (knowledgeBase.isRUN() && knowledgeBase.isBLUESRCREEN() && knowledgeBase.isSOUNDS()) {
+                return true;
+            } else return false;
+        });
+        Rule r11 = new Rule((t) -> {
+            if (knowledgeBase.isRUN() && knowledgeBase.isBLUESRCREEN() && knowledgeBase.isSLOW_MOTION()) {
+                return true;
+            } else return false;
+        });
+        Rule r12 = new Rule((t) -> {
+            if (knowledgeBase.isRUN() && knowledgeBase.isBLUESRCREEN() && knowledgeBase.isMONIOR_OFF()) {
+                return true;
+            } else return false;
+        });
+        Rule r13 = new Rule((t) -> {
+            if (knowledgeBase.isRUN() && knowledgeBase.isSLOW_MOTION() && knowledgeBase.isMONIOR_OFF()) {
+                return true;
+            } else return false;
+        });
+        Rule r14 = new Rule((t) -> {
+            if (knowledgeBase.isMONITOR()) {
+                return true;
+            } else return false;
+        });
 
+        graficsRules.add(r1);
+        graficsRules.add(r2);
+        graficsRules.add(r3);
+        graficsRules.add(r4);
+        graficsRules.add(r5);
+        graficsRules.add(r6);
+        graficsRules.add(r7);
+        graficsRules.add(r8);
+        graficsRules.add(r9);
+        graficsRules.add(r10);
+        graficsRules.add(r11);
+        graficsRules.add(r12);
+        graficsRules.add(r13);
+        graficsRules.add(r14);
     }
 
     private void createPowerRules() {
         powerRules = new ArrayList<>();
 
-        Rule r1 = new Rule((t) ->{
-           if(knowledgeBase.isNOT_RUN() && knowledgeBase.isPOWER_OFF()){
-               return true;
-           }else return false;
-        });
-        Rule r2 = new Rule((t) ->{
-            if(knowledgeBase.isPOWER_OFF()){
+        Rule r1 = new Rule((t) -> {
+            if (knowledgeBase.isNOT_RUN() && knowledgeBase.isPOWER_OFF()) {
                 return true;
-            }else return false;
+            } else return false;
+        });
+        Rule r2 = new Rule((t) -> {
+            if (knowledgeBase.isPOWER_OFF()) {
+                return true;
+            } else return false;
         });
         powerRules.add(r1);
         powerRules.add(r2);
@@ -98,29 +235,25 @@ public class ExpertSystem {
 
     private void createMotherboardRules() {
         motherboardRules = new ArrayList<>();
-        Rule r1 = new Rule((t) ->{
-            if(knowledgeBase.isNOT_RUN() && knowledgeBase.isRESTART() && knowledgeBase.isSLOW_MOTION()){
+        Rule r1 = new Rule((t) -> {
+            if (knowledgeBase.isNOT_RUN() && knowledgeBase.isRESTART() && knowledgeBase.isSLOW_MOTION()) {
                 return true;
-            }
-            else return false;
+            } else return false;
         });
-        Rule r2 = new Rule((t) ->{
-            if(knowledgeBase.isNOT_RUN() && knowledgeBase.isRESTART()){
+        Rule r2 = new Rule((t) -> {
+            if (knowledgeBase.isNOT_RUN() && knowledgeBase.isRESTART()) {
                 return true;
-            }
-            else return false;
+            } else return false;
         });
-        Rule r3 = new Rule((t) ->{
-            if(knowledgeBase.isNOT_RUN() && knowledgeBase.isSLOW_MOTION()){
+        Rule r3 = new Rule((t) -> {
+            if (knowledgeBase.isNOT_RUN() && knowledgeBase.isSLOW_MOTION()) {
                 return true;
-            }
-            else return false;
+            } else return false;
         });
-        Rule r4 = new Rule((t) ->{
-            if(knowledgeBase.isRESTART() && knowledgeBase.isSLOW_MOTION()){
+        Rule r4 = new Rule((t) -> {
+            if (knowledgeBase.isRESTART() && knowledgeBase.isSLOW_MOTION()) {
                 return true;
-            }
-            else return false;
+            } else return false;
         });
 
         motherboardRules.add(r1);
@@ -130,42 +263,66 @@ public class ExpertSystem {
     }
 
     private void createHardDriveRules() {
-
+        hardDriveRules = new ArrayList<>();
+        Rule r1 = new Rule((t) -> {
+            if (knowledgeBase.isRUN() && knowledgeBase.isHDD_SSD()) {
+                return true;
+            } else return false;
+        });
+        Rule r2 = new Rule((t) -> {
+            if (knowledgeBase.isRUN() && knowledgeBase.isHDD_SSD() && knowledgeBase.isSOUNDS()) {
+                return true;
+            } else return false;
+        });
+        Rule r3 = new Rule((t) -> {
+            if (knowledgeBase.isRUN() && knowledgeBase.isRUN_RESTART() && knowledgeBase.isSOUNDS()) {
+                return true;
+            } else return false;
+        });
+        Rule r4 = new Rule((t) -> {
+            if (knowledgeBase.isRUN() && knowledgeBase.isHDD_SSD() && knowledgeBase.isRUN_RESTART()) {
+                return true;
+            } else return false;
+        });
+        hardDriveRules.add(r1);
+        hardDriveRules.add(r2);
+        hardDriveRules.add(r3);
+        hardDriveRules.add(r4);
     }
 
     public KnowledgeBase getKnowledgeBase() {
         return knowledgeBase;
     }
 
+    public String validateRules() {
+        String result = "Rozpoznane wadliwe podzespoły: \n";
+        result += validateList(hardDriveRules, "DYSK TWARDY");
+        result += validateList(motherboardRules, "PŁYTA GŁÓWNA");
+        result += validateList(powerRules, "ZASILANIE");
+        result += validateList(graficsRules, "KARTA GRAFICZNA");
+        result += validateList(memoryeRules, "KOŚCI RAM");
+        result += validateList(heatRules, "CHŁODZENIE");
+        result += validateList(processorRules, "PROCESOR");
+        return result;
+    }
+
+    private String validateList(List<Rule> ruleList, String segments) {
+        int counter = 0;
+        for (Rule rule : ruleList) {
+            if (rule.valid()) {
+                counter++;
+            }
+        }
+        if (counter > 0) {
+            String res = "Uszkodzony " + segments + "- ilość trafionych reguł = " + counter+ "\n";
+            return res;
+        }else return "";
+
+    }
+
     public void addAssertion(String assertion) {
         setOfAssertions.add(assertion);
     }
 
-    public List<Rule> getHardDriveRules() {
-        return hardDriveRules;
-    }
 
-    public List<Rule> getMotherboardRules() {
-        return motherboardRules;
-    }
-
-    public List<Rule> getPowerRules() {
-        return powerRules;
-    }
-
-    public List<Rule> getGraficsRules() {
-        return graficsRules;
-    }
-
-    public List<Rule> getMemoryeRules() {
-        return memoryeRules;
-    }
-
-    public List<Rule> getHeatRules() {
-        return heatRules;
-    }
-
-    public List<Rule> getProcessorRules() {
-        return processorRules;
-    }
 }
