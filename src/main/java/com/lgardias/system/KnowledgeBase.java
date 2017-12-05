@@ -1,8 +1,11 @@
 package com.lgardias.system;
 
+
 import java.util.HashSet;
 
+
 public class KnowledgeBase {
+
 
     private boolean RUN;
     private boolean NOT_RUN;
